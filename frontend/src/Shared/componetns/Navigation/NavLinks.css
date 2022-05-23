@@ -1,0 +1,29 @@
+ ul {
+    display: flex;
+    justify-content: space-between;
+}
+.links li  {
+    margin: 12px; 
+
+}
+.links li .navbar {
+    color: white;
+    /* border-bottom: 2.2px solid whitesmoke; */
+    transition: 0.6;
+    display: flex;
+    flex-direction: column;
+}
+/* .links li .navbar .home {
+    margin-right: 8px;
+} */
+.links li .navbar.active {
+    color: white;
+    border-bottom: 2px solid whitesmoke;
+    transition: 0.6;
+    zoom: 110%;
+}
+@media screen and (max-width:650px) {
+    .links {
+        display: none;
+    }
+}

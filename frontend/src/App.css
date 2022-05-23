@@ -1,0 +1,13 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #fafafa; */
+  
+  overflow-x: hidden;
+}
+.App ::-webkit-scrollbar {
+  display: none;
+}
+main {
+  margin-top: 50px;
+}

@@ -1,0 +1,49 @@
+ .rightmenu {
+     height: 100vh;
+     width: 99%;
+     background-color: black;
+     z-index: 200;
+     margin-top: 71px;
+     
+     position: fixed;
+     right: 0;
+     top: 0;
+     
+     transition: 0.7s;
+     transform: translateX(200%);
+     opacity: 0;
+     
+ }
+ .rightmenu .linko {
+     flex-direction: column;
+     align-items: center;
+     justify-content:space-between;
+     position: relative;
+     top: 30px;
+ }
+ .rightmenu .linko li {
+    margin: 20px auto;
+ }
+ .rightmenu .linko li .active {
+     
+     color: white;
+     border-bottom: 2px solid white;
+   
+     
+ }
+ .rightmenu .linko li .navbar {
+     color: white;
+     font-size: 20px;
+     font-weight: 600;
+     opacity: 1;
+ }
+ 
+ .rightmenu.active{
+     transform: translateX(0%);
+     opacity: 0.7;
+ }
+@media screen and (min-width:650px) {
+    .rightmenu {
+        display: none;
+    }
+}

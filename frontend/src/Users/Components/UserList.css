@@ -1,0 +1,12 @@
+.userList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* width:1000px ; */
+}
+.userList ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

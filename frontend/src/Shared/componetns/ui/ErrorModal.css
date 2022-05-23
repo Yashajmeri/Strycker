@@ -1,0 +1,119 @@
+.errorDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.errorModal {
+    position: fixed;
+
+    top:200px;
+    /* left: 38.5%; */
+    margin: auto;
+    z-index: 300;
+    
+    
+    background-color: white;
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0px 3px 20px rgba(0, 0, 0,0.10); */
+    border-radius: 8px;
+    padding: 0;
+    transform: translateY(-200%);
+    transition: 0.5s  ease-out;
+    opacity: 0;
+
+}
+.errorModal.active {
+    transform: translateY(0%);
+    opacity: 1;
+
+}
+.errorModal .header3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color:#001E6C ;
+    color: aliceblue;
+    width: 100%;
+    font-weight: 500;
+    border-radius:  8px 8px 0 0  ;
+
+   }
+   .errorModal .maindelete 
+   {
+       height: 100vh;
+       display: flex;
+       padding-top: 10px;
+       
+   }
+   .errorModal .maindelete p {
+       font-size: 18px;
+       padding: 5px;
+       font-weight: 500;
+       margin-top: 20px;
+   }
+   .errorModal .buttons {
+       position: relative;
+       bottom: 0px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       margin-bottom: 0;
+       border: none;
+   }
+   .errorModal .buttons .confirm {
+       width: 50%;
+       height: 40px;
+       border: none; 
+       border-right: 1px solid gray;
+       /* background-color: #001E6C; */
+       color: black;
+       margin-bottom: 0;
+       border-radius: 0 0 0 8px  ;
+       font-weight: 200;
+   }
+   .errorModal .buttons .cancel {
+    width: 100%;
+    height: 40px;  
+    border: none; 
+    background-color: #FF6363;
+    color: white;
+    margin-bottom: 0;
+    border-radius: 0 0 8px 8px ;
+    font-weight: 200;
+}
+.errorModal .buttons .cancel:hover,
+.errorModal .buttons .confirm:hover
+ {
+    opacity: 0.9    ;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0,0.1);
+}
+.errorModal .buttons .cancel:active,
+.errorModal .buttons .confirm:active{
+    background-color: aqua;
+    opacity: 0.8;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0,0.1);
+}
+.backdrop {
+    height: 100%;
+    width: 100%;
+    transform: translateY(200%);
+    background-color: black;
+    z-index: 200;
+   transition: 0.6;
+    
+}
+.backdrop.active {
+    transform: translateY(0%);
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    position: fixed;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+}

@@ -1,0 +1,14 @@
+.imagectrl {height: auto;
+width: auto;}
+
+
+.imagectrl .imgUpload .imgPreview {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border: 1px dashed black   ;
+  text-align: center;
+}
+.imagectrl .imgUpload button {
+    opacity: 1;
+}

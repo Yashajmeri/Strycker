@@ -1,0 +1,244 @@
+.card {
+    display: flex;
+    position: sticky;
+    top: 70px;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    box-shadow: 0px 3px 20px rgba(0, 0, 0,0.25);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    width: 350px;
+    height: auto;
+    max-height: 550px;
+    border-radius:  5px;
+    overflow: hidden;
+}
+.card .image {
+    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  overflow: hidden;
+  
+}
+.card .image img {
+    width: 100%;
+    border-radius: 5px 5px 0 0 ;
+}
+
+.card .info {
+    text-align: center;
+    border-bottom: 2px solid    #EDE6DB;
+    margin-bottom: 5px;
+    width: 100%;
+    height: auto;
+}
+.card .info h2 {
+  font-size: 16px;
+  /* font-weight: 500; */
+  padding: 5px;
+  word-wrap: break-word;
+}
+.card .info h4 {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px;
+    word-wrap: break-word;
+} 
+.card .info p {
+    font-size: 12px;
+    padding: 5px;
+    /* text-overflow: ellipsis; */
+    word-wrap: break-word;
+}
+.card .action {
+    
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.card .action .icon-item{
+    font-size: 20px;
+    /* padding-top: 4px;
+    margin-right: 4px; */
+}
+.card .action button {
+    /* border:1px solid black !important; */
+    margin: 2px 5px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.card .action .btn1 {
+    background: transparent;
+    /* border: black; */
+}
+.card .action .btn1:hover,
+.card .action .btn1:active {
+    color: #30AADD;
+    background-color: white;
+  
+}
+.card .action .btn3 {
+
+ background:transparent;
+}
+.card .action .btn3:hover,
+.card .action .btn3:active {
+    color: #890F0D;
+    /* opacity: 0.9; */
+    background-color:white ;
+}
+.card .action .btn2 {
+
+    background:transparent;
+   }
+   .card .action .btn2:hover,
+   .card .action .btn2:active {
+       color: #F68989;
+       /* opacity: 0.9; */
+       background-color: #Fff;
+   }
+   .list .deleteModal {
+       position: fixed;
+
+       top:200px;
+       /* left: 38.5%; */
+       margin: auto;
+       z-index: 300;
+       
+       background-color: white;
+       height: 200px;
+       width: 350px;
+       display: flex;
+       flex-direction: column;
+       /* box-shadow: 0px 3px 20px rgba(0, 0, 0,0.10); */
+       border-radius: 8px;
+       padding: 0;
+       transform: translateY(-200%);
+       transition: 0.5s  ease-out;
+       opacity: 0;
+
+   }
+   .list .deleteModal.active {
+    transform: translateY(0%);
+    opacity: 1;
+
+}
+   .list .deleteModal .header3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color:#001E6C ;
+    color: aliceblue;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 8px 8px 0 0 ;
+
+   }
+   .list .deleteModal .maindelete 
+   {
+       height: 100vh;
+       display: flex;
+       padding-top: 20px;
+       
+   }
+   .list .deleteModal .maindelete p {
+       font-size: 14px;
+       padding: 5px;
+       font-weight: 500;
+       margin-top: 20px;
+   }
+   .list .deleteModal .buttons {
+       position: relative;
+       bottom: 0px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       margin-bottom: 0;
+       border: none;
+   }
+   .list .deleteModal .buttons .confirm {
+       width: 50%;
+       height: 40px;
+       border: none; 
+       border-right: 1px solid gray;
+       /* background-color: #001E6C; */
+       color: black;
+       margin-bottom: 0;
+       border-radius: 0 0 0 8px  ;
+       font-weight: 200;
+   }
+   .list .deleteModal .buttons .cancel {
+    width: 50%;
+    height: 40px;  
+    border: none; 
+    background-color: #FF6363;
+    color: white;
+    margin-bottom: 0;
+    border-radius: 0 0 8px 0 ;
+    font-weight: 200;
+}
+.list .deleteModal .buttons .cancel:hover,
+.list .deleteModal .buttons .confirm:hover
+ {
+    opacity: 0.9    ;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0,0.1);
+}
+list .deleteModal .buttons .cancel:active,
+.list .deleteModal .buttons .confirm:active{
+    background-color: aqua;
+    opacity: 0.8;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0,0.1);
+}
+.list .backdrop {
+    height: 100%;
+    width: 100%;
+    transform: translateY(200%);
+    background-color: black;
+    z-index: 200;
+   transition: 0.6;
+    
+}
+.list .backdrop.active {
+    transform: translateY(0%);
+    height: 100vh;
+    opacity: 0.6;
+    position: fixed;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+}
+
+@media screen and (min-width:650) {
+    .card {
+        width: 300px;
+       
+    }
+    .card .image {
+        width: 300px;
+    }
+    .list .deleteModal {
+        position: fixed;
+width: 80%;
+       
+       z-index: 300;
+    }
+}
+@media screen and (min-width:350) {
+    .card {
+        width: 100%;
+       
+    } 
+}

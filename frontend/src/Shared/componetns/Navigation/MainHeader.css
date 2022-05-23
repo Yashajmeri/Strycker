@@ -1,0 +1,68 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6200ee;
+    /* background: transparent; */
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 101;
+    padding: 5px 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1) ;
+    border-bottom: 1px solid gray;
+    border-radius: 0  0 5px 5px;
+}
+header h2 {
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: cursive;
+   
+}
+.logo {
+    max-width: 50px;
+    width: 50px;
+    height: 50px;
+   /* border-radius: 50%; */
+    margin-right: 2px;
+    overflow: hidden;
+    color: white;
+  }
+header ul {
+    display: flex;
+}
+
+.toggle {
+    display: none;
+}
+.toggle .barchart {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top:20px;
+    right: 20px;
+transform: rotate(-90deg);
+color: #fff;
+
+}
+@media screen and (max-width:650px) {
+    .toggle {
+        display:inline;
+    }
+    header {
+        width: 100%;
+        
+    }
+    header h2 {
+        font-size: 28px;
+    }
+    .logo {
+        height: 45px;
+        width: 45px;
+    }
+}
